@@ -11,7 +11,7 @@ mv $name /tmp/$name
 scp /tmp/$name $remoteuser@$server:$wwwdir$target
 rm /tmp/$name
 
-remotefile=$server$target$name
+remotefile=$server'/'$target$name
 echo $remotefile | xsel -bi
 notify-send $remotefile
 
