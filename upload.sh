@@ -6,7 +6,7 @@ wwwdir=/var/www/
 target=u/
 scp $@ $remoteuser@$server:$wwwdir$target$name
 
-remotefile=$server'/'$target$@
+remotefile='http://'$server'/'$target$@
 echo $remotefile | xsel -bi
 notify-send $remotefile
 
